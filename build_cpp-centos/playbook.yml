@@ -1,0 +1,11 @@
+- hosts: localhost
+  remote_user: root
+  tasks:
+    - name: install build tools
+      yum:
+        name:
+          - git
+          - make
+          - automake
+          - gcc-c++
+        state: latest
